@@ -60,6 +60,12 @@
     <Compile Include="Abstract\IWriterDAL.cs" />
     <Compile Include="Concrate\Context.cs" />
     <Compile Include="Concrate\Repository\GenericRepository.cs" />
+    <Compile Include="EntityFramework\EFAboutDAL.cs" />
+    <Compile Include="EntityFramework\EFCategoryDAL.cs" />
+    <Compile Include="EntityFramework\EFContactDAL.cs" />
+    <Compile Include="EntityFramework\EFContentDAL.cs" />
+    <Compile Include="EntityFramework\EFHeadingDAL.cs" />
+    <Compile Include="EntityFramework\EFWriterDAL.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
