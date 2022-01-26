@@ -55,9 +55,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract\ICategoryService.cs" />
+    <Compile Include="Abstract\IWriterService.cs" />
     <Compile Include="Conrete\CategoryManager.cs" />
+    <Compile Include="Conrete\WriterManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ValidationRule\CategoryValidator.cs" />
+    <Compile Include="ValidationRule\WriterValidator.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

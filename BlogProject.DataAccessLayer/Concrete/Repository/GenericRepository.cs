@@ -37,8 +37,8 @@ namespace BlogProject.DataAccessLayer.Concrete.Repository
         public void Insert(T entity)
         {
             // _object.Add(entity);
-            var addEntity = c.Entry(entity);
-            addEntity.State = EntityState.Added;
+            var addedEntity = c.Entry(entity);
+            addedEntity.State = EntityState.Added;
 
             c.SaveChanges();
         }
