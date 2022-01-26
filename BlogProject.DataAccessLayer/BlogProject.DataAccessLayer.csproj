@@ -58,8 +58,8 @@
     <Compile Include="Abstract\IHeadingDAL.cs" />
     <Compile Include="Abstract\IRepository.cs" />
     <Compile Include="Abstract\IWriterDAL.cs" />
-    <Compile Include="Concrate\Context.cs" />
-    <Compile Include="Concrate\Repository\GenericRepository.cs" />
+    <Compile Include="Concrete\Context.cs" />
+    <Compile Include="Concrete\Repository\GenericRepository.cs" />
     <Compile Include="EntityFramework\EFAboutDAL.cs" />
     <Compile Include="EntityFramework\EFCategoryDAL.cs" />
     <Compile Include="EntityFramework\EFContactDAL.cs" />

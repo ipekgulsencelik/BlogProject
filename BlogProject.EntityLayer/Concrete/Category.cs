@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlogProject.EntityLayer.Concrate
+namespace BlogProject.EntityLayer.Concrete
 {
     public class Category
     {

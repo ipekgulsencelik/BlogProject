@@ -51,12 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Concrate\About.cs" />
-    <Compile Include="Concrate\Category.cs" />
-    <Compile Include="Concrate\Contact.cs" />
-    <Compile Include="Concrate\Content.cs" />
-    <Compile Include="Concrate\Heading.cs" />
-    <Compile Include="Concrate\Writer.cs" />
+    <Compile Include="Concrete\About.cs" />
+    <Compile Include="Concrete\Category.cs" />
+    <Compile Include="Concrete\Contact.cs" />
+    <Compile Include="Concrete\Content.cs" />
+    <Compile Include="Concrete\Heading.cs" />
+    <Compile Include="Concrete\Writer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,4 +1,4 @@
-﻿using BlogProject.EntityLayer.Concrate;
+﻿using BlogProject.EntityLayer.Concrete;
 using FluentValidation;
 using System;
 using System.Collections.Generic;

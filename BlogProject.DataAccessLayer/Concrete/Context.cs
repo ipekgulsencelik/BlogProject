@@ -1,4 +1,4 @@
-﻿using BlogProject.EntityLayer.Concrate;
+﻿using BlogProject.EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlogProject.DataAccessLayer.Concrate
+namespace BlogProject.DataAccessLayer.Concrete
 {
     public class Context : DbContext
     {

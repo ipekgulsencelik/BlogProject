@@ -7,7 +7,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlogProject.DataAccessLayer.Concrate.Repository
+namespace BlogProject.DataAccessLayer.Concrete.Repository
 {
     public class GenericRepository<T> : IRepository<T> where T : class
     {

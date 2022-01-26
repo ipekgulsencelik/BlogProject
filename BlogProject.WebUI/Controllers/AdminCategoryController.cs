@@ -1,7 +1,7 @@
-﻿using BlogProject.BusinessLayer.Conrate;
+﻿using BlogProject.BusinessLayer.Conrete;
 using BlogProject.BusinessLayer.ValidationRule;
 using BlogProject.DataAccessLayer.EntityFramework;
-using BlogProject.EntityLayer.Concrate;
+using BlogProject.EntityLayer.Concrete;
 using FluentValidation.Results;
 using System;
 using System.Collections.Generic;
@@ -50,6 +50,31 @@ namespace BlogProject.WebUI.Controllers
             }
 
             return View();
+        }
+
+        public ActionResult DeleteCategory(int id)
+        {
+            var categoryValue = categoryManager.GetByID(id);
+
+            categoryManager.CategoryDelete(categoryValue);
+
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public ActionResult EditCategory(int id)
+        {
+            var categoryValue = categoryManager.GetByID(id);
+
+            return View(categoryValue);
+        }
+
+        [HttpPost]
+        public ActionResult EditCategory(Category category)
+        {
+            categoryManager.CategoryUpdate(category);
+
+            return RedirectToAction("Index");
         }
     }
 }

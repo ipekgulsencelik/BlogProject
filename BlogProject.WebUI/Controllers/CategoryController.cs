@@ -1,7 +1,7 @@
-﻿using BlogProject.BusinessLayer.Conrate;
+﻿using BlogProject.BusinessLayer.Conrete;
 using BlogProject.BusinessLayer.ValidationRule;
 using BlogProject.DataAccessLayer.EntityFramework;
-using BlogProject.EntityLayer.Concrate;
+using BlogProject.EntityLayer.Concrete;
 using FluentValidation.Results;
 using System;
 using System.Collections.Generic;

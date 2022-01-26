@@ -5,14 +5,14 @@
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<BlogProject.DataAccessLayer.Concrate.Context>
+    internal sealed class Configuration : DbMigrationsConfiguration<BlogProject.DataAccessLayer.Concrete.Context>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
         }
 
-        protected override void Seed(BlogProject.DataAccessLayer.Concrate.Context context)
+        protected override void Seed(BlogProject.DataAccessLayer.Concrete.Context context)
         {
             //  This method will be called after migrating to the latest version.
 

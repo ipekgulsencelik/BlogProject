@@ -1,14 +1,14 @@
 ﻿using BlogProject.BusinessLayer.Abstract;
 using BlogProject.DataAccessLayer.Abstract;
-using BlogProject.DataAccessLayer.Concrate.Repository;
-using BlogProject.EntityLayer.Concrate;
+using BlogProject.DataAccessLayer.Concrete.Repository;
+using BlogProject.EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlogProject.BusinessLayer.Conrate
+namespace BlogProject.BusinessLayer.Conrete
 {
     public class CategoryManager : ICategoryService
     {
@@ -23,6 +23,21 @@ namespace BlogProject.BusinessLayer.Conrate
         public void CategoryAdd(Category category)
         {
             _categoryDAL.Insert(category);
+        }
+
+        public void CategoryDelete(Category category)
+        {
+            _categoryDAL.Delete(category);
+        }
+
+        public void CategoryUpdate(Category category)
+        {
+            _categoryDAL.Update(category);
+        }
+
+        public Category GetByID(int id)
+        {
+            return _categoryDAL.Get(x => x.CategoryID == id);
         }
 
         public List<Category> GetList()

@@ -1,6 +1,6 @@
 ﻿using BlogProject.DataAccessLayer.Abstract;
-using BlogProject.DataAccessLayer.Concrate.Repository;
-using BlogProject.EntityLayer.Concrate;
+using BlogProject.DataAccessLayer.Concrete.Repository;
+using BlogProject.EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
