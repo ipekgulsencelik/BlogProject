@@ -82,7 +82,9 @@
     <Compile Include="Concrete\Message.cs" />
     <Compile Include="Concrete\Role.cs" />
     <Compile Include="Concrete\ScreenShot.cs" />
+    <Compile Include="Concrete\Talent.cs" />
     <Compile Include="Concrete\Status.cs" />
+    <Compile Include="Concrete\Skill.cs" />
     <Compile Include="Concrete\Writer.cs" />
     <Compile Include="DTOs\AdminLoginDTO.cs" />
     <Compile Include="DTOs\WriterLoginDTO.cs" />

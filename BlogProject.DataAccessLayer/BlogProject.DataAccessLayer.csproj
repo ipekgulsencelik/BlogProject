@@ -61,7 +61,9 @@
     <Compile Include="Abstract\IMessageDAL.cs" />
     <Compile Include="Abstract\IRoleDAL.cs" />
     <Compile Include="Abstract\IScreenShotDAL.cs" />
+    <Compile Include="Abstract\ISkillDAL.cs" />
     <Compile Include="Abstract\IStatusDAL.cs" />
+    <Compile Include="Abstract\ITalentDAL.cs" />
     <Compile Include="Abstract\IWriterDAL.cs" />
     <Compile Include="Concrete\Context.cs" />
     <Compile Include="Abstract\IRepository.cs" />
@@ -76,7 +78,9 @@
     <Compile Include="EntityFramework\EFMessageDAL.cs" />
     <Compile Include="EntityFramework\EFRoleDAL.cs" />
     <Compile Include="EntityFramework\EFScreenShotDAL.cs" />
+    <Compile Include="EntityFramework\EFSkillDAL.cs" />
     <Compile Include="EntityFramework\EFStatusDAL.cs" />
+    <Compile Include="EntityFramework\EFTalentDAL.cs" />
     <Compile Include="EntityFramework\EFWriterDAL.cs" />
     <Compile Include="Migrations\202310071609315_mig_edit_writer.cs" />
     <Compile Include="Migrations\202310071609315_mig_edit_writer.designer.cs">
@@ -89,6 +93,10 @@
     <Compile Include="Migrations\202310261525463_mig_add_image_table.cs" />
     <Compile Include="Migrations\202310261525463_mig_add_image_table.designer.cs">
       <DependentUpon>202310261525463_mig_add_image_table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202310290014558_mig_add_vitrin_tables.cs" />
+    <Compile Include="Migrations\202310290014558_mig_add_vitrin_tables.designer.cs">
+      <DependentUpon>202310290014558_mig_add_vitrin_tables.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -112,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202310261525463_mig_add_image_table.resx">
       <DependentUpon>202310261525463_mig_add_image_table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202310290014558_mig_add_vitrin_tables.resx">
+      <DependentUpon>202310290014558_mig_add_vitrin_tables.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

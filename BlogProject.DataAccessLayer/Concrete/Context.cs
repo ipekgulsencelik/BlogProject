@@ -15,5 +15,8 @@ namespace BlogProject.DataAccessLayer.Concrete
         public DbSet<Role> Roles { get; set; }
         public DbSet<Message> Messages { get; set; }
         public DbSet<ImageFile> ImageFiles { get; set; }
+        public DbSet<Talent> Talents { get; set; }
+        public DbSet<Skill> Skills { get; set; }
+        public DbSet<ScreenShot> ScreenShots { get; set; }
     }
 }
