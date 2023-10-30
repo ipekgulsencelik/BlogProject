@@ -82,6 +82,7 @@
     <Compile Include="Concrete\HeadingManager.cs" />
     <Compile Include="Concrete\ImageFileManager.cs" />
     <Compile Include="Concrete\MessageManager.cs" />
+    <Compile Include="Concrete\RoleManager.cs" />
     <Compile Include="Concrete\ScreenShotManager.cs" />
     <Compile Include="Concrete\SkillManager.cs" />
     <Compile Include="Concrete\StatusManager.cs" />

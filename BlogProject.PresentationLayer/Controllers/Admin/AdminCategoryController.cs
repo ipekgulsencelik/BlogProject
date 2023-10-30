@@ -51,7 +51,7 @@ namespace BlogProject.PresentationLayer.Controllers.Admin
 
         public ActionResult DeleteCategory(int id)
         {
-            var categoryValue = categoryManager.GetByIdCategory(id);
+            var categoryValue = categoryManager.GetByID(id);
 
             if (categoryValue.StatusID == 2)
             {
@@ -61,7 +61,6 @@ namespace BlogProject.PresentationLayer.Controllers.Admin
             {
                 categoryValue.StatusID = 2;
             }
-
             categoryManager.CategoryDelete(categoryValue);
             return RedirectToAction("Index");
         }
@@ -75,10 +74,9 @@ namespace BlogProject.PresentationLayer.Controllers.Admin
                                                             Text = x.StatusName,
                                                             Value = x.StatusID.ToString()
                                                         }).ToList();
-
             ViewBag.valueCategoryStatus = categoryStatusValue;
 
-            var categoryValue = categoryManager.GetByIdCategory(id);
+            var categoryValue = categoryManager.GetByID(id);
             return View(categoryValue); 
         }
 
@@ -89,11 +87,11 @@ namespace BlogProject.PresentationLayer.Controllers.Admin
             categoryManager.CategoryUpdate(category);
             return RedirectToAction("Index");
         }
-
-        //public ActionResult CategoryByHeading(int id)
-        //{
-        //    var categoryValue = categoryManager.GetByIdCategory(id);
-        //    return View(categoryValue);
-        //}
+        
+        public ActionResult CategoryByHeading(int id)
+        {
+            var categoryValue = categoryManager.GetByID(id);
+            return View(categoryValue);
+        }
     }
 }

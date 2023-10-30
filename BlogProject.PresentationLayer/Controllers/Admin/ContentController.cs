@@ -17,7 +17,6 @@ namespace BlogProject.PresentationLayer.Controllers.Admin
         public ActionResult GetAllContent()
         {
             var values = contentManager.GetList();
-
             return View(values);
         }
 
@@ -25,13 +24,12 @@ namespace BlogProject.PresentationLayer.Controllers.Admin
         public ActionResult GetAllContent(string searchKeyWord)
         {
             var values = contentManager.GetListBySearch(searchKeyWord);
-
             return View(values);
         }
 
         public ActionResult ContentByHeading(int id)
         {
-            var contentValues = contentManager.GetListByHeadingID(id);
+            var contentValues = contentManager.GetListByHeading(id);
             return View(contentValues);
         }
     }

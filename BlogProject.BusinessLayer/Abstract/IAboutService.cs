@@ -5,10 +5,8 @@ namespace BlogProject.BusinessLayer.Abstract
 {
     public interface IAboutService
     {
-        About GetByAboutID(int id);
+        About GetByID(int id);
         List<About> GetList();
-        //List<About> GetListIsFalse();
-        //List<About> GetListIsTrue();
         void AboutAdd(About about);
         void AboutDelete(About about);
         void AboutUpdate(About about);

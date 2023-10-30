@@ -29,7 +29,7 @@ namespace BlogProject.BusinessLayer.Concrete
             _aboutDAL.Update(about);
         }
 
-        public About GetByAboutID(int id)
+        public About GetByID(int id)
         {
             return _aboutDAL.Get(x => x.AboutID == id);
         }

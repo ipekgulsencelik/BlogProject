@@ -29,7 +29,7 @@ namespace BlogProject.BusinessLayer.Concrete
             _contentDAL.Update(content);
         }
 
-        public Content GetByIDContent(int id)
+        public Content GetByID(int id)
         {
             return _contentDAL.Get(x => x.ContentID == id);
         }
@@ -39,7 +39,7 @@ namespace BlogProject.BusinessLayer.Concrete
             return _contentDAL.List();
         }
 
-        public List<Content> GetListByHeadingID(int id)
+        public List<Content> GetListByHeading(int id)
         {
             return _contentDAL.List(x => x.HeadingID == id); 
         }

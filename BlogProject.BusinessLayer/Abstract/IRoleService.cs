@@ -1,12 +1,10 @@
-﻿using System;
+﻿using BlogProject.EntityLayer.Concrete;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BlogProject.BusinessLayer.Abstract
 {
-    internal interface IRoleService
+    public interface IRoleService
     {
+        List<Role> GetRoles();
     }
 }

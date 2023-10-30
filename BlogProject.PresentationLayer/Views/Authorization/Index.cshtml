@@ -1,0 +1,85 @@
+﻿﻿@using BlogProject.EntityLayer.Concrete
+@using PagedList
+@using PagedList.Mvc
+@model PagedList.IPagedList<Admin>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@{
+    string color = "";
+    string buttonTyp = "";
+    string status = "";
+}
+
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th style="width: 1%; text-align: center">#</th>
+        <th style="width: 5%; text-align: center">Kullanıcı Adı</th>
+        <th style="width: 1%; text-align: center">Yetki</th>
+        <th style="width: 5%; text-align: center">Yetki Detay</th>
+        <th style="width: 2%; text-align: center">Durumu</th>
+        <th style="width: 3%; text-align: center">Aktif / Pasif</th>
+        <th style="width: 3%; text-align: center">Yetki Degiştir</th>
+        <th style="width: 3%; text-align: center">Bilgilerini Güncelle</th>
+        <th style="width: 1%; text-align: center">Sil</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        if (item.StatusID == 2)
+        {
+            status = "Pasif Yap";
+            buttonTyp = "btn btn-danger";
+        }
+        if (item.StatusID == 1)
+        {
+            status = "Aktif Yap";
+            buttonTyp = "btn btn-success";
+        }
+        <tr>
+            <th>@item.AdminID</th>
+            <td style="text-align: center">@item.AdminUserName</td>
+            <td style="text-align: center;background-color: gold"><b>@item.Role.RoleName</b></td>
+            <td style="text-align: center">@item.Role.Description</td>
+            <td style="text-align: center">
+                @{ if (item.StatusID == 2)
+                    {
+                        <b style="color: green "> Aktif</b> 
+                   }
+                   else
+                   {
+                        <b style="color: red">Pasif</b> 
+                   }
+                }
+            </td>
+            <td style="text-align: center">
+                <a href="/Authorization/ChangeAdminStatus/@item.AdminID" class="@buttonTyp">@status</a>
+
+                @*<a class="btn btn-primary" href="/Authorization/AuthorizationPartial/@item.AdminId">
+                        <i class="fas fa-folder"></i>
+                        Yetkisini Değiştir
+                    </a>*@
+
+                @*<button class="btn btn-primary" data-toggle="modal" data-target="#Modal1">
+                        Yetkisini Değiştir
+                    </button>*@
+
+                @*@Html.Action("AuthorizationPartial", "Authorization")*@
+            </td>
+            <td style="text-align: center">
+                <a href="/Authorization/UpdateRole/@item.AdminID" class="btn btn-primary">Yetkisini Değiştir</a>
+            </td>
+            @*<td><a href="/Authorization/UpdateRole/@item.AdminId" class="btn btn-warning">Yetkisini Değiştir</a></td>*@
+            <td style="text-align: center">
+                <a href="/Authorization/UpdateProfile/@item.AdminID" class="btn btn-warning">Bilgilerini Güncelle</a>
+            </td>
+            <td style="text-align: center"><a href="/Authorization/DeleteAdmin/@item.AdminID" class="btn btn-danger">Sil</a></td>
+        </tr>
+    }
+</table>
+<a href="/Authorization/AddAdmin/" class="btn btn-info">Yeni Admin Tanımla</a>
+
+@Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new { page }))

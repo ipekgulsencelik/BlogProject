@@ -8,7 +8,7 @@ namespace BlogProject.BusinessLayer.Abstract
         List<Heading> GetList();
         List<Heading> GetListByWriterID(int id);
         List<Heading> GetListByCategoryID(int id);
-        Heading GetByIDHeading(int id);
+        Heading GetByID(int id);
         void HeadingAdd(Heading heading);
         void HeadingDelete(Heading heading);
         void HeadingUpdate(Heading heading);

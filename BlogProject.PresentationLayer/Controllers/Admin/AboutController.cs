@@ -35,7 +35,7 @@ namespace BlogProject.PresentationLayer.Controllers.Admin
 
         public ActionResult IsActive(int id)
         {
-            var aboutValue = aboutManager.GetByAboutID(id);
+            var aboutValue = aboutManager.GetByID(id);
             if (aboutValue.Status)
             {
                 aboutValue.Status = false;
@@ -45,7 +45,6 @@ namespace BlogProject.PresentationLayer.Controllers.Admin
                 aboutValue.Status = true;
             }
             aboutManager.AboutUpdate(aboutValue);
-
             return RedirectToAction("Index");
         }
     }

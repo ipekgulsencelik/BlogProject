@@ -6,7 +6,7 @@ namespace BlogProject.BusinessLayer.Abstract
     public interface IWriterService
     {
         List<Writer> GetList();
-        List<Writer> GetListByWriterID(int id);
+        List<Writer> GetListByID(int id);
         Writer GetByID(int id);
         void WriterAdd(Writer writer);
         void WriterDelete(Writer writer);

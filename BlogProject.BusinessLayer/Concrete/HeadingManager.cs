@@ -14,7 +14,7 @@ namespace BlogProject.BusinessLayer.Concrete
             _headingDAL = headingDAL;
         }
 
-        public Heading GetByIDHeading(int id)
+        public Heading GetByID(int id)
         {
             return _headingDAL.Get(x => x.HeadingID == id);
         }

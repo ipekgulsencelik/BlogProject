@@ -111,7 +111,7 @@
                                     <a>@item.HeadingName</a>
                                     <br />
                                     <small>
-                                        @(((DateTime) item.HeadingDate).ToString("dd-MMM-yyyy"))
+                                        @(((DateTime)item.HeadingDate).ToString("dd-MMM-yyyy"))
                                     </small>
                                 </td>
                                 <td>
@@ -130,7 +130,7 @@
                                         else
                                         {
                                             <b style="color: red">Pasif</b> 
-                                        } 
+                                        }
                                     }
                                 </td>
                                 <td class="project-state">
@@ -165,18 +165,20 @@
                                                 buttonTyp = "btn btn-success";
                                                 statusColor = "badge badge-success";
                                             }
-                                            //switch (item.HeadingStatus)
-                                            //{
-                                            //    case true:
-                                            //        statusColor = "badge badge-success";
-                                            //        status = "Aktif";
-                                            //        break;
-                                            //    case false:
-                                            //        statusColor = "badge badge-danger";
-                                            //        status = "Pasif";
-                                            //        break;
-                                            //}
-                                            <span class="@statusColor">@status</span> 
+                                            @*
+                                            switch (item.HeadingStatus)
+                                            {
+                                                case true:
+                                                    statusColor = "badge badge-success";
+                                                    status = "Aktif";
+                                                    break;
+                                                case false:
+                                                    statusColor = "badge badge-danger";
+                                                    status = "Pasif";
+                                                    break;
+                                            }                                  
+                                            *@
+                                        <span class="@statusColor">@status</span> 
                                         }
                                     </a>
                                 </td>
@@ -191,6 +193,6 @@
     </section>
 </body>
 </html>
-
 <a href="/Heading/AddHeading/" class="btn btn-primary">Yeni  Başlık Girişi</a>
+
 @Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new { page }))

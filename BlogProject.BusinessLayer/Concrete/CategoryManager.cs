@@ -29,7 +29,7 @@ namespace BlogProject.BusinessLayer.Concrete
             _categoryDAL.Update(category);
         }
 
-        public Category GetByIdCategory(int id)
+        public Category GetByID(int id)
         {
             return _categoryDAL.Get(x => x.CategoryID == id);
         }

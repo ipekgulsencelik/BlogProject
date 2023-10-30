@@ -1,0 +1,34 @@
+﻿﻿@using System.Web.UI.WebControls
+@using BlogProject.EntityLayer.Concrete
+@model Admin
+
+
+<!--Eger controller den PartialView tarafina veri cekilirse UpdateRole sayfasinin yerine bu hayata gecirilecektir.-->
+
+<div class="modal" id="Modal1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Admin Yetki Değiştirme</h2>
+            </div>
+            <form method="post" action="/Authorization/Index">
+                <div class="modal-body">
+                    @Html.HiddenFor(x => x.AdminID, new { @class = "form-control" })
+                    @Html.HiddenFor(x => x.AdminPasswordHash, new { @class = "form-control" })
+                    @Html.HiddenFor(x => x.AdminPasswordSalt, new { @class = "form-control" })
+                    @Html.HiddenFor(x => x.AdminMail, new { @class = "form-control" })
+                    @*@Html.TextBoxFor(x => x.AdminUserName, new { @class = "form-control" })
+                        @Html.TextBoxFor(x => x.AdminStatus, new { @class = "form-control" })*@
+                    <br />
+                    <label>Rolü :  @Model </label>
+                    @*@Html.DropDownListFor(x => x.RoleId, (List<SelectListItem>)ViewBag.valueAdminRole, new { @class = "form-control" })*@
+                    <br />
+                    <br />
+                    <button class="btn btn-primary">Kaydet</button>
+                    <br />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<br />

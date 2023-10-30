@@ -44,7 +44,7 @@ namespace BlogProject.PresentationLayer.Controllers.Admin
                                                      Text = x.WriterName + " " + x.WriterSurName,
                                                      Value = x.WriterID.ToString()
                                                  }).ToList();
-
+            
             List<SelectListItem> headingStatusValue = (from x in statusManager.GetList()
                                                        select new SelectListItem
                                                        {
@@ -86,8 +86,7 @@ namespace BlogProject.PresentationLayer.Controllers.Admin
 
             ViewBag.valueHeadingStatus = headingStatusValue;
             ViewBag.valueCategory = _valueCategory; 
-            var headingValue = headingManager.GetByIDHeading(id);
-
+            var headingValue = headingManager.GetByID(id);
             return View(headingValue);
         }
 
@@ -100,7 +99,7 @@ namespace BlogProject.PresentationLayer.Controllers.Admin
 
         public ActionResult DeleteHeading(int id)
         {
-            var headingValue = headingManager.GetByIDHeading(id);
+            var headingValue = headingManager.GetByID(id);
 
             if (headingValue.StatusID == 2)
             {
@@ -110,7 +109,6 @@ namespace BlogProject.PresentationLayer.Controllers.Admin
             {
                 headingValue.StatusID = 2;
             }
-
             headingManager.HeadingDelete(headingValue);
             return RedirectToAction("Index");
         }
